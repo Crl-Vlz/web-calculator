@@ -242,7 +242,8 @@ function operate(key) {
         }
         dotted = false;
       } else if (isOperand && inOp) {
-        x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
+        if (y !== "")
+          x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
         y = "";
         $(".result").text(x);
         dotted = false;
