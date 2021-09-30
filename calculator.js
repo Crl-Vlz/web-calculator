@@ -245,10 +245,6 @@ function operate(key) {
         x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
         y = "";
         $(".result").text(x);
-        if (key === "=") {
-          x = "";
-          inOp = false;
-        }
         dotted = false;
       }
       if (key === ".") dotted = true;
