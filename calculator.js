@@ -206,14 +206,14 @@ function operate(key) {
   } else {
     if (!dotted || key !== ".") {
       if (!isOperand && !inOp) {
-        if (key === "0") {
+        if (key === "0" && $(".result").text()==="0") {
           $(".result").text("0");
         } else {
           if (x.length < 14) x += key;
           $(".result").text(x);
         }
       } else if (!isOperand && inOp) {
-        if (key === "0") {
+        if (key === "0" && $(".result").text()==="0") {
           $(".result").text("0");
         } else {
           if (y.length < 14) y += key;
