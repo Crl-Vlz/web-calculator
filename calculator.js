@@ -221,7 +221,10 @@ function operate(key) {
         }
       } else if (isOperand && !inOp) {
         if (key !== "=") {
-          $(".result").text("0");
+          $(".result").text("");
+          setTimeout(() => {
+            $(".result").text(x);
+          }, 200);
           inOp = true;
         } else {
           if (x.length >= 1) $(".result").text(x);
