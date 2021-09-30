@@ -247,6 +247,9 @@ function operate(key) {
         y = "";
         $(".result").text(x);
         dotted = false;
+        if (key === "=") {
+          inOp = false;
+        }
       }
       if (key === ".") dotted = true;
     }
