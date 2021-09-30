@@ -192,15 +192,24 @@ function operate(key) {
     if (key === "RESET") {
       x = "";
       y = "";
-      $(".result").text("0");
+      $(".result").text(".");
+      setTimeout(() => {
+        $(".result").text("0");
+      }, 200);
       inOp = false;
     } else {
       if (inOp) {
         y = "";
-        $(".result").text("0");
+        $(".result").text(".");
+        setTimeout(() => {
+          $(".result").text("0");
+        }, 200);
       } else {
         x = "";
-        $(".result").text("0");
+        $(".result").text(".");
+        setTimeout(() => {
+          $(".result").text("0");
+        }, 200);
       }
     }
   } else {
@@ -221,7 +230,7 @@ function operate(key) {
         }
       } else if (isOperand && !inOp) {
         if (key !== "=") {
-          $(".result").text("");
+          $(".result").text(".");
           setTimeout(() => {
             $(".result").text(x);
           }, 200);
@@ -235,7 +244,10 @@ function operate(key) {
       } else if (isOperand && inOp) {
         x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
         y = "";
-        $(".result").text(x);
+        $(".result").text(".");
+        setTimeout(() => {
+          $(".result").text(x);
+        }, 200);
         if (key === "=") {
           x = "";
           inOp = false;
