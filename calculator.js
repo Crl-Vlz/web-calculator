@@ -244,10 +244,7 @@ function operate(key) {
       } else if (isOperand && inOp) {
         x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
         y = "";
-        $(".result").text(".");
-        setTimeout(() => {
-          $(".result").text(x);
-        }, 200);
+        $(".result").text(x);
         if (key === "=") {
           x = "";
           inOp = false;
