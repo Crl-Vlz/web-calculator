@@ -1,0 +1,236 @@
+:root {
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-bg: hsl(223, 31%, 20%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --key-sec-bg: hsl(225, 21%, 49%);
+  --key-sec-shadow: hsl(224, 28%, 35%);
+  --key-main-bg: hsl(6, 63%, 50%);
+  --toggle: hsl(6, 63%, 50%);
+  --key-main-shadow: hsl(6, 70%, 34%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --key-text: hsl(221, 14%, 31%);
+  --key-sec-text: hsl(0, 0%, 100%);
+  --key-main-text: hsl(0, 0%, 100%);
+  --main-text: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 1080px) {
+  :root {
+    --keyboard-width: 40vw;
+    --key-width: 7vw;
+    --big-key-width: 16vw;
+    --av-key-width: 4vw;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  :root {
+    --keyboard-width: 90vw;
+    --key-width: 15vw;
+    --big-key-width: 36vw;
+    --av-key-width: 9vw;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap");
+
+* {
+  font-family: "Spartan", sans-serif;
+  font-weight: bolder !important;
+  background-color: var(--main-bg) !important;
+  color: var(--main-text);
+}
+
+#header {
+  background-color: var(--main-bg) !important;
+  width: var(--keyboard-width) !important;
+}
+
+.theme {
+  font-size: 0.7rem !important;
+}
+
+.screen {
+  background-color: var(--screen-bg) !important;
+  height: 10% !important;
+  width: var(--keyboard-width) !important;
+  border-radius: 0.5rem !important;
+}
+
+.result {
+  font-size: 32pt;
+  display: flex;
+  background-color: inherit !important;
+  align-items: center !important;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.keyboard {
+  background-color: var(--keypad-bg) !important;
+  width: var(--keyboard-width) !important;
+  height: 80% !important;
+  border-radius: 0.5rem;
+}
+
+.keyboard div {
+  background-color: var(--keypad-bg) !important;
+  height: 80% !important;
+}
+
+.btn-calc {
+  background-color: var(--key-bg) !important;
+  color: var(--key-text) !important;
+  box-shadow: 0vw 0.5vh var(--key-shadow);
+  width: var(--key-width) !important;
+  border-radius: 0.5rem !important;
+}
+
+.btn-show {
+  background-color: var(--key-bg) !important;
+  color: var(--key-text) !important;
+  box-shadow: 0vw 0.5vh var(--key-shadow);
+  width: var(--key-width) !important;
+  border-radius: 0.5rem !important;
+}
+
+.btn-ad-calc {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: var(--key-bg) !important;
+  color: var(--key-text) !important;
+  box-shadow: 0vw 0.3vh var(--key-shadow);
+  width: var(--av-key-width) !important;
+  border-radius: 0.5rem !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hidden div {
+  display: none !important;
+}
+
+.hidden div p {
+  display: none !important;
+}
+
+#av-Keys {
+  width: var(--keyboard-width) !important;
+  background-color: var(--keypad-bg) !important;
+  border-radius: 0.5rem !important;
+  height: 5rem !important;
+  align-items: center !important;
+  margin-top: 1% !important;
+  margin-bottom: -2% !important;
+  /*z-index: 1 !important;*/
+}
+
+.key-bg {
+  background-color: var(--keypad-bg) !important;
+}
+
+.pressedCalc {
+  background-color: var(--key-shadow) !important;
+}
+
+.DEL {
+  background-color: var(--key-sec-bg) !important;
+  color: var(--key-sec-text) !important;
+  box-shadow: 0vw 0.5vh var(--key-sec-shadow) !important;
+  height: 100% !important;
+}
+
+.RES {
+  background-color: var(--key-sec-bg) !important;
+  color: var(--key-sec-text) !important;
+  box-shadow: 0vw 0.5vh var(--key-sec-shadow) !important;
+  width: var(--big-key-width) !important;
+  height: 100% !important;
+}
+
+.pressedSec {
+  background-color: var(--key-sec-shadow) !important;
+}
+
+.Eq {
+  background-color: var(--key-main-bg) !important;
+  color: var(--key-main-text) !important;
+  box-shadow: 0vw 0.5vh var(--key-main-shadow) !important;
+  width: var(--big-key-width) !important;
+  height: 100% !important;
+}
+
+.pressedEq {
+  background-color: var(--key-main-shadow) !important;
+}
+
+input[type="range"]#slider::-webkit-slider-thumb {
+  background-color: var(--toggle) !important;
+}
+
+input[type="range"]#slider::-moz-range-thumb {
+  background-color: var(--toggle) !important;
+}
+
+input[type="range"]#slider::-ms-thumb {
+  background-color: var(--toggle) !important;
+}
+
+input[type="range"]#slider:focus::-webkit-slider-thumb {
+  box-shadow: none !important;
+}
+
+input[type="range"]#slider:focus::-moz-range-thumb {
+  box-shadow: none !important;
+}
+
+input[type="range"]#slider:focus::-ms-thumb {
+  box-shadow: none !important;
+}
+
+input[type="range"]#slider:hover::-webkit-slider-thumb {
+  cursor: pointer !important;
+}
+
+input[type="range"]#slider:hover::-moz-range-thumb {
+  cursor: pointer !important;
+}
+
+input[type="range"]#slider:hover::-ms-thumb {
+  cursor: pointer !important;
+}
+
+input[type="range"]#slider::-webkit-slider-runnable-track {
+  background-color: var(--keypad-bg) !important;
+  height: 100% !important;
+  width: 120% !important;
+}
+
+input[type="range"]#slider::-moz-range-track {
+  background-color: var(--keypad-bg) !important;
+  height: 100% !important;
+  width: 120% !important;
+}
+
+input[type="range"]#slider::-ms-track {
+  background-color: var(--keypad-bg) !important;
+  height: 100% !important;
+  width: 120% !important;
+}
+
+input[type="range"]#slider:hover::-webkit-slider-runnable-track {
+  cursor: pointer !important;
+}
+
+input[type="range"]#slider:hover:-moz-range-track {
+  cursor: pointer !important;
+}
+
+input[type="range"]#slider:hover::-ms-track {
+  cursor: pointer !important;
+}

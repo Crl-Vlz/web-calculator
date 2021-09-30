@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Calculator app</title>
+  </head>
+  <body>
+    <!--Main container-->
+    <main class="container">
+      <!--Header-->
+      <div class="container d-flex justify-content-center">
+        <div
+          class="
+            container
+            d-flex
+            justify-content-between
+            screen
+            my-3
+            align-items-end
+            row
+          "
+          id="header"
+        >
+          <h1 class="col h4">calc</h1>
+          <!--Controls-->
+          <div
+            class="container col row d-flex justify-content-end"
+            id="controls"
+          >
+            <div class="row">
+              <div class="col"></div>
+              <!--Numbers-->
+              <div class="col d-flex justify-content-between" id="numbers">
+                <p class="d-flex justify-content-start theme">1</p>
+                <p class="d-flex justify-content-around theme">2</p>
+                <p class="d-flex justify-content-end theme">3</p>
+              </div>
+            </div>
+            <!--Slider-->
+            <div class="row">
+              <h2 class="col theme">THEME</h2>
+              <div class="col" id="sldr">
+                <input
+                  type="range"
+                  id="slider"
+                  min="0"
+                  max="2"
+                  value="0"
+                  class="form-range col"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Screen-->
+      <div class="container">
+        <div class="container d-flex justify-content-end screen my-3">
+          <!--Result-->
+          <p class="result">0</p>
+        </div>
+      </div>
+
+      <!--Advanced Keyboard-->
+      <div id="av-Keys" class="container d-flex justify-content-between hidden">
+        <div class="key-bg">
+          <p id="sin" class="btn btn-ad-calc">sin</p>
+        </div>
+        <div class="key-bg">
+          <p id="cos" class="btn btn-ad-calc">cos</p>
+        </div>
+        <div class="key-bg">
+          <p id="tan" class="btn btn-ad-calc">tan</p>
+        </div>
+        <div class="key-bg">
+          <p id="x**2" class="btn btn-ad-calc">x**2</p>
+        </div>
+        <div class="key-bg">
+          <p id="x**y" class="btn btn-ad-calc">x**y</p>
+        </div>
+        <div class="key-bg">
+          <p id="sqrt" class="btn btn-ad-calc">sqrt</p>
+        </div>
+      </div>
+
+      <!--Basic Keyboard-->
+      <div
+        class="
+          container
+          keyboard
+          d-flex
+          flex-column
+          justify-content-around
+          align-items-center
+          py-5
+        "
+      >
+        <div class="row">
+          <div class="col">
+            <p id="show" class="btn btn-show">Show</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p id="seven" class="btn btn-calc">7</p>
+          </div>
+          <div class="col">
+            <p id="eight" class="btn btn-calc">8</p>
+          </div>
+          <div class="col">
+            <p id="nine" class="btn btn-calc">9</p>
+          </div>
+          <div class="col">
+            <p id="DEL" class="btn btn-calc DEL">DEL</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p id="four" class="btn btn-calc">4</p>
+          </div>
+          <div class="col">
+            <p id="five" class="btn btn-calc">5</p>
+          </div>
+          <div class="col">
+            <p id="six" class="btn btn-calc">6</p>
+          </div>
+          <div class="col">
+            <p id="sum" class="btn btn-calc">+</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p id="one" class="btn btn-calc">1</p>
+          </div>
+          <div class="col">
+            <p id="two" class="btn btn-calc">2</p>
+          </div>
+          <div class="col">
+            <p id="three" class="btn btn-calc">3</p>
+          </div>
+          <div class="col">
+            <p id="min" class="btn btn-calc">-</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p id="dot" class="btn btn-calc">.</p>
+          </div>
+          <div class="col">
+            <p id="zero" class="btn btn-calc">0</p>
+          </div>
+          <div class="col">
+            <p id="d" class="btn btn-calc">/</p>
+          </div>
+          <div class="col">
+            <p id="x" class="btn btn-calc">x</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 d-flex justify-content-around">
+            <p id="RES" class="btn btn-calc RES">RESET</p>
+          </div>
+          <div class="col-6 d-flex justify-content-around">
+            <p id="Eq" class="btn btn-calc Eq">=</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Script for calculator-->
+    <script src="calculator.js"></script>
+
+    <!--My personal CSS-->
+    <link rel="stylesheet" href="style.css" />
+  </body>
+</html>
