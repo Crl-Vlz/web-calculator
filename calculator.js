@@ -230,11 +230,11 @@ function operate(key) {
             $(".result").text(x);
           }, 200);
           inOp = true;
+          oper = key;
         } else {
           if (x.length >= 1) $(".result").text(x);
           else $(".result").text("0");
           x = "";
-          oper = key;
         }
         dotted = false;
       } else if (isOperand && inOp) {
