@@ -109,21 +109,16 @@ function operateBasic(x, y, operand) {
 
 function checkIfOperand(operand) {
   if (operand === "+") {
-    oper = "+";
     return true;
   } else if (operand === "-") {
-    oper = "-";
     return true;
   } else if (operand === "x") {
-    oper = "x";
     return true;
   } else if (operand === "/") {
-    oper = "/";
     return true;
   } else if (operand === "=") {
     return true;
   } else if (operand === "x**y") {
-    oper = "x**y";
     return true;
   }
   return false;
@@ -239,17 +234,20 @@ function operate(key) {
           if (x.length >= 1) $(".result").text(x);
           else $(".result").text("0");
           x = "";
+          oper = key;
         }
         dotted = false;
       } else if (isOperand && inOp) {
-        if (y !== "")
+        if (key === "=") {
+          inOp = false;
+          x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
+        }
+        else if (y !== "")
           x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
         y = "";
         $(".result").text(x);
         dotted = false;
-        if (key === "=") {
-          inOp = false;
-        }
+        oper = key;
       }
       if (key === ".") dotted = true;
     }
