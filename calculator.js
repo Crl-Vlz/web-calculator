@@ -242,12 +242,13 @@ function operate(key) {
           inOp = false;
           x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
         }
-        else if (y !== "")
+        else if (y !== ""){
           x = String(operateBasic(Number(x), Number(y), oper)).substring(0, 14);
+          oper = key;
+        }
         y = "";
         $(".result").text(x);
         dotted = false;
-        oper = key;
       }
       if (key === ".") dotted = true;
     }
